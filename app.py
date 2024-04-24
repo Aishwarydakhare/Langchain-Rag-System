@@ -18,7 +18,7 @@ def preprocess_paper(paper_text):
     return paragraphs
 
 # Load the embedding model
-embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="AIzaSyDeFmoBbE6wNDKftGcF0mowbgzhC5HjzUw", 
+embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="AIzaSyBVn7gWq6L0ayDfyEvRRTv6lBHVwe86_2Q", 
                                                model="models/embedding-001")
 
 # Setting a Connection with the ChromaDB
@@ -40,7 +40,7 @@ chat_template = ChatPromptTemplate.from_messages([
 ])
 
 # Initialize chat model
-chat_model = ChatGoogleGenerativeAI(google_api_key="AIzaSyC2Bztff9XtDCDrCJfMJ8py9JaT8VkwSlY", 
+chat_model = ChatGoogleGenerativeAI(google_api_key="AIzaSyBVn7gWq6L0ayDfyEvRRTv6lBHVwe86_2Q", 
                                     model="gemini-1.5-pro-latest")
 
 # Initialize output parser
@@ -76,6 +76,9 @@ if st.button("📝Generate Answer📣"):
         st.write(response)
     else:
         st.warning("📑💡Please enter a question.")
+
+  
+
 
   
 
